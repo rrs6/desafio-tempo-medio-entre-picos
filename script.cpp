@@ -7,8 +7,8 @@ int main() {
     ios_base::sync_with_stdio(0); cin.tie(0); //Otimizando a leitura e escrita de dados
     int n; // valor que corresponde ao número de observações de supostos picos.
     cin>>n;
-    vector<lli> a(n), b(n);
-    for(int i = 0; i < n; i++)
+    vector<lli> a(n), b(n); //Array a registra o valor no i-ésimo tempo.
+    for(int i = 0; i < n; i++) //Array b registra o tempo no i-ésimo valor.
         cin>>a[i];
     for(int i = 0; i < n; i++)
         cin>>b[i];
@@ -32,6 +32,6 @@ int main() {
     lli minutes = (sum_sec/60); //divindindo por 60 para pegar a quantidade de minutos
     lli seconds = (sum_sec%60); //pegando os segundos restantes.
     //Formatando a saída para mostrar o tempo em minutos e segundos.
-    cout << "TMEP: " << minutes << " minutos e " << seconds << " segundos." <<'\n';
+    cout << "TMEP: " << minutes << ":" << seconds << " (min : sec)." <<'\n';
     return 0;
 }
