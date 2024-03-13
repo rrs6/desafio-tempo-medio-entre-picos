@@ -21,6 +21,8 @@ Escolhi realizar a implementação em C++, por questão de preferência. Tenho a
 
 A estrutura do código é a seguinte: Haverá um arquivo do código fonte da solução do desafio, chamado de 'script.cpp'. Além disso, também terá um arquivo de entrada 'input' e outro de saída 'output'. Será a partir delas que forneceremos dados e observaremos a resposta.
 
+A lógica consiste em pegar os valores e primeiramente agrupa-los em tuplas que associa o tempo ao seu valor. Logo após, realizar uma filtragem nos registros que tem seu valor menor que 50, para que eles não sejam considerados no cálculo. Feito isso, ordenamos o nosso array, baseando-se no tempo e logo após fazemos os somatórios das diferenças consecutivas e dividimos pelo números de intervalos.
+
 # O que é necessário para roda ?
 Caso possua o gcc compiler em sua máquina, você só precisa compilar o código com o seguinte comando abaixo:
 
@@ -29,6 +31,8 @@ g++ -std=c++17 scripts.cpp -o script
 Uma vez que o código foi compilado, você precisa roda-lo passando os arquivos de entrada e saída como parâmetros, sendo assim é necessário rodar:
 
 ./script < input > output
+
+Caso não tenho o gcc compiler em sua máquina, existem duas alternativa a serem feitas. Ou se instala o compilador para realizar os passo anteriores ou utiliza um compilador online como o Online Gdb.
 
 # Algumas considerações
 Esse desafio poderia ser escalado para um nível de dificuldade um pouco maior se fossem considerados algumas outras    questões, como por exemplo se a entrada fosse no formato HH:MM:SS.
