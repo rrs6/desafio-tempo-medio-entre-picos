@@ -28,7 +28,7 @@ int main() {
     lli sum_sec = 0;
     for(int i = 1; i < ab.size(); i++)
         sum_sec += (ab[i].first-ab[i-1].first); // Somando todos os tempos que foram filtrados
-    sum_sec /= (ab.size()-1); //Dividindo o tempo de todos o somatório pela quantidade de intervalos (ab.size()-1);
+    sum_sec /= max((lli)(ab.size()-1), (lli)1); //Dividindo o tempo de todos o somatório pela quantidade de intervalos (ab.size()-1) e evitando a divisão por zero;
     lli minutes = (sum_sec/60); //divindindo por 60 para pegar a quantidade de minutos
     lli seconds = (sum_sec%60); //pegando os segundos restantes.
     //Formatando a saída para mostrar o tempo em minutos e segundos.
